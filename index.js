@@ -12,7 +12,7 @@ server.use((req, res, next) => {
     console.log("Sigue con la autenticación");
   }
 });
-server.listen(3500, () => {
+server.listen(process.env.PORT||3500, () => {
   console.log('Bienvenido a la API de Delilah Restó');
 })
 server.post('/login', (req, res) => {

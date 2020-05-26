@@ -8,7 +8,7 @@
     "jsonwebtoken": "^8.5.1"
   },
   "scripts": {
-    "start": "npx nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

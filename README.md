@@ -49,7 +49,6 @@ Para ejecutar la API de Delilah Restó.
 
 ### Funcionamiento de la API 
 
-Para una descripción amplia de la API y sus endpoints puede usar el archivo `specs.yml` en [Swagger](https://editor.swagger.io/).
 
 Para probar la API puede usar el siguiente [*Collection*](https://www.getpostman.com/collections/96be5c2968f0f870e4d5) 
 de [Postman](https://www.postman.com/).

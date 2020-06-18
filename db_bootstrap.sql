@@ -42,6 +42,7 @@ CREATE TABLE orders (
     `description` VARCHAR(50),
     total_value INT UNSIGNED NOT NULL,
     user_id INT UNSIGNED NOT NULL,
+    `date` DATETIME NOT NULL,
     payment ENUM('Efectivo', 'Débito', 'Crédito') NOT NULL,
     state ENUM('Nuevo', 'Confirmado', 'Preparando', 'Enviando', 'Entregado', 'Cancelado') NOT NULL,
     CONSTRAINT fk_user FOREIGN KEY (user_id)
@@ -76,21 +77,21 @@ INSERT INTO user(full_name, user_name, email, phone, address, password, is_admin
 -- Inserción de productos
 -- ========================================================================
 INSERT INTO product(name, description, price) values
-('Hamburguesa del poder','Una hamburguesa con todos los poderes nórdicos',15000);
+('Hamburguesa Del Poder','Una hamburguesa con todos los poderes nórdicos',15000);
 INSERT INTO product(name, description, price) values
-('Pizza del poder','Una pizza con todos los poderes romanos',19000);
+('Pizza Del Poder','Una pizza con todos los poderes romanos',19000);
 INSERT INTO product(name, description, price) values
-('Perro del poder','Un perro caliente con todos los poderes gringos',12000);
+('Perro Del Poder','Un perro caliente con todos los poderes gringos',12000);
 
 -- ========================================================================
 -- Inserción de pedidos
 -- ========================================================================
-INSERT INTO orders(description, total_value, user_id, payment, state) values
-('HamX1,PizX1',34000,2,'Efectivo','Entregado');
-INSERT INTO orders(description, total_value, user_id, payment, state) values
-('HamX2',30000,3,'Efectivo','Enviando');
-INSERT INTO orders(description, total_value, user_id, payment, state) values
-('HamX2,PerX2',54000,2,'Crédito','Confirmado');
+INSERT INTO orders(description, total_value, user_id, payment, state, `date`) values
+('1xHamPod,1xPizPod',34000,2,'Efectivo','Entregado','2020-05-15 16:04:50');
+INSERT INTO orders(description, total_value, user_id, payment, state, `date`) values
+('2xHamPod',30000,3,'Efectivo','Enviando','2020-05-16T12:39:00');
+INSERT INTO orders(description, total_value, user_id, payment, state, `date`) values
+('2xHamPod,2xPerPod',54000,2,'Crédito','Confirmado','2020-05-17T19:00:28');
 -- ========================================================================
 -- Inserción de productos por pedido
 -- ========================================================================

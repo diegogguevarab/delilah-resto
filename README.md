@@ -49,6 +49,7 @@ Para ejecutar la API de Delilah Restó.
 
 ### Funcionamiento de la API 
 
+Para una descripción amplia de la API y sus endpoints puede acceder al path [localhost:3500/docs/](http://localhost:3500/docs/#/paths/) luego de ejecutar el proyecto.
 
 Para probar la API puede usar el siguiente [*Collection*](https://www.getpostman.com/collections/96be5c2968f0f870e4d5) 
 de [Postman](https://www.postman.com/).
